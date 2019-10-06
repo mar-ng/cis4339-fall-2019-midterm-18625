@@ -1,8 +1,8 @@
-# Exam 1, Fall 2019 Section 19390
+# Exam 1, Fall 2019 Section 18625 
 
 ## Instructions
 
-1) Add an h1 tag in the header div with the text "Exam 1 by \<your full name\>" (example: "Exam 1 by Keith Lancaster")
+1) Add an h1 tag in the header div with the text "Exam 1, Section 18625, by \<your full name\>" (example: "Exam 1 by Keith Lancaster")
 
 2) Using the appropriate helper function (as used in the practice exam), format the salary in the title index page to show the dollar sign and 2 digits after the decimal point.
 
@@ -10,7 +10,7 @@
 
 4) Modify any forms with text fields that require database IDs to use dropdown menus.
 
-5) Scaffold a model called Manager with the fields last name, first name, and district (all strings). The model should also reference the Shop model, so that a manager is in charge of one shop and a shop could have many managers. Modify the Manager form so that when you create a new manager, you can select a shop from a dropdown menu.
+5) Scaffold a model called Vendor with the fields last name, first name, region, and notes (all strings). The model should also reference the Shop model, so that a vendor is related to one shop and a shop could have many vendors. Modify the Vendor form so that when you create a new vendor, you can select a shop from a dropdown menu.
 
 ## Turning in the exam
 
