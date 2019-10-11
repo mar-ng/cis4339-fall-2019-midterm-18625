@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_032301) do
+ActiveRecord::Schema.define(version: 2019_10_11_000423) do
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 2019_10_06_032301) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["shop_id"], name: "index_employees_on_shop_id"
     t.index ["title_id"], name: "index_employees_on_title_id"
+  end
+
+  create_table "managers", force: :cascade do |t|
+    t.integer "shop_id", null: false
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["shop_id"], name: "index_managers_on_shop_id"
   end
 
   create_table "shops", force: :cascade do |t|
@@ -36,6 +44,19 @@ ActiveRecord::Schema.define(version: 2019_10_06_032301) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "vendors", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.string "region"
+    t.string "notes"
+    t.integer "shop_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["shop_id"], name: "index_vendors_on_shop_id"
+  end
+
   add_foreign_key "employees", "shops"
   add_foreign_key "employees", "titles"
+  add_foreign_key "managers", "shops"
+  add_foreign_key "vendors", "shops"
 end

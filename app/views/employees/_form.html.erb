@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :shop_id %>
-    <%= form.text_field :shop_id %>
+    <%= form.collection_select :shop_id, Shop.all, :id, :name%>
   </div>
 
   <div class="field">
     <%= form.label :title_id %>
-    <%= form.text_field :title_id %>
+    <%= form.collection_select :title_id, Title.all, :id, :name %>
   </div>
 
   <div class="actions">

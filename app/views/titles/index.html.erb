@@ -15,7 +15,7 @@
     <% @titles.each do |title| %>
       <tr>
         <td><%= title.name %></td>
-        <td><%= title.salary %></td>
+        <td><%= number_to_currency(title.salary) %></td>
         <td><%= link_to 'Show', title %></td>
         <td><%= link_to 'Edit', edit_title_path(title) %></td>
         <td><%= link_to 'Destroy', title, method: :delete, data: { confirm: 'Are you sure?' } %></td>

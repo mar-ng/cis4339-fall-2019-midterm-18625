@@ -7,12 +7,12 @@
 
 <p>
   <strong>Shop:</strong>
-  <%= @employee.shop_id %>
+  <%= @employee.shop.name %>
 </p>
 
 <p>
   <strong>Title:</strong>
-  <%= @employee.title_id %>
+  <%= @employee.title.name %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
